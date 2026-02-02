@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="{% static 'weather_report.css' %}">
+</head>
+<body>
+
+<div class="weather-card">
+
+    <h1 class="city">
+        {% if fetch_data %}
+            {{ fetch_data.city_name }}
+        {% else %}
+            Weather Report
+        {% endif %}
+    </h1>
+
+    {% if error %}
+        <p style="color:red; margin-top:10px;">{{ error }}</p>
+    {% endif %}
+
+    {% if fetch_data %}
+        <div class="weather-main">
+            <div class="temperature">
+                {{ fetch_data.temperature }}°C
+            </div>
+            <div class="condition">
+                {{ fetch_data.condition }}
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="detail">
+                <span>Humidity</span>
+                <strong>{{ fetch_data.humidity }}%</strong>
+            </div>
+            <div class="detail">
+                <span>Wind</span>
+                <strong>{{ fetch_data.wind_speed }} m/s</strong>
+            </div>
+        </div>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'index' %}">⬅ Go Back</a>
+
+</div>
+
+</body>
+</html>

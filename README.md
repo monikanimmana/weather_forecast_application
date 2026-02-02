@@ -157,8 +157,8 @@ Contributions are welcome!
 **Monika**
 Aspiring Python & Django Developer
 
-* GitHub: [https://github.com/monikanimmana](https://github.com/monikanimmana)
-* LinkedIn:# 🌦️ Weather Forecast Web Application
+* GitHub:** [https://github.com/monikanimmana](https://github.com/monikanimmana)
+* LinkedIn:** (https://linkedin.com/in/monika-nimmana-0887652a4)
 
 A clean, responsive **Weather Forecast Web Application** built with **Django** that allows users to search for real‑time weather information of any city using the **OpenWeatherMap API**. The project follows best practices such as environment variables, API error handling, and a clear project structure, making it suitable for learning, showcasing, and further extension.
 
@@ -345,5 +345,6 @@ Aspiring Python & Django Developer
 ---
 
 ⭐ If you like this project, don’t forget to **star the repository**!
+
 
 

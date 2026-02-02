@@ -18,11 +18,12 @@ A clean, responsive **Weather Forecast Web Application** built with **Django** t
 
 ## 🛠️ Tech Stack
 
-* **Backend:** Django (Python)
-* **Frontend:** HTML, CSS (Django Templates)
-* **API:** OpenWeatherMap API
-* **Environment Management:** python-dotenv / os.getenv
-* **Version Control:** Git & GitHub
+- 🐍 **Backend** – Python, Django  
+- 🌐 **Frontend** – HTML, CSS (Django Templates)  
+- ☁️ **API** – OpenWeatherMap API  
+- 🔧 **Environment Management** – python-dotenv / os.getenv  
+- 🗄️ **Database (optional)** – SQLite (default Django) or PostgreSQL  
+- 🔧 **Version Control** – Git, GitHub
 
 ---
 
@@ -345,6 +346,7 @@ Aspiring Python & Django Developer
 ---
 
 ⭐ If you like this project, don’t forget to **star the repository**!
+
 
 
 

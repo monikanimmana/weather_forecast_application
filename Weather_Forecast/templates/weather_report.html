@@ -1,67 +1,74 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="sample.css" />
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="{% static 'weather_report.css'%}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
 
   <!-- Search Bar -->
-  <header class="search-container glass">
-    <input type="text" placeholder="Search city..." />
+   <form method="GET" action="{% url 'weather' %}">
+
+    <header class="search-container glass">
+     {% csrf_token %} 
+    <input type="text" name ="city" placeholder="Search city..." />
     <button aria-label="Search">
       <i class="fa fa-search"></i>
     </button>
-  </header>
+     </header>
+  </form>
 
   <!-- Main Weather -->
+  
   <section class="main-weather glass">
-    <h1>Hyderabad</h1>
-    <h2>28<span>°C</span></h2>
-    <p class="condition">Clear Sky</p>
+    <h1>{{city_name}}</h1>
+    <h2>{{temperature}}<span>°C</span></h2>
+    <p class="condition">{{condition}}</p>
   </section>
 
   <!-- Weather Cards -->
   <section class="weather-grid">
 
     <div class="weather-card glass">
-      <img src="assests/sunrise.png" alt="Sunrise" />
+      <img src="{% static 'assests/sunrise.png' %}" alt="Sunrise" />
       <h3>Sunrise</h3>
-      <p>06:12 AM</p>
+      <p>{{sunrise}}AM</p>
     </div>
 
     <div class="weather-card glass">
-      <img src="assests/sunset.png" alt="Sunset" />
+      <img src="{% static 'assests/sunset.png' %}" alt="Sunset" />
       <h3>Sunset</h3>
-      <p>06:45 PM</p>
+      <p>{{sunset}} PM</p>
     </div>
 
     <div class="weather-card glass">
-      <img src="assests/humidity.png" alt="Humidity" />
+      <img src="{% static 'assests/humidity.png' %}" alt="Humidity" />
       <h3>Humidity</h3>
-      <p>65%</p>
+      <p>{{humidity}}%</p>
     </div>
 
     <div class="weather-card glass">
-      <img src="assests/rainy.png" alt="Rain" />
+      <img src="{% static 'assests/rainy.png'%}" alt="Rain" />
       <h3>Rain</h3>
-      <p>0 mm</p>
+      <p>{{rain}} mm</p>
     </div>
 
     <div class="weather-card glass">
-      <img src="assests/wind.png" alt="Wind" />
+      <img src="{% static 'assests/wind.png' %}" alt="Wind" />
       <h3>Wind</h3>
-      <p>12 km/h</p>
+      <p>{{wind_speed}} km/h</p>
     </div>
 
     <div class="weather-card glass">
-      <img src="assests/witness.png" alt="Visibility" />
+      <img src="{% static 'assests/visibility.png' %}" alt="Visibility" />
       <h3>Visibility</h3>
-      <p>10 km</p>
+      <p>{{visibility}} km</p>
     </div>
+   
 
   </section>
 

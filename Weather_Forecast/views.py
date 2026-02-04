@@ -3,10 +3,7 @@ import requests
 from django.conf import settings
 from datetime  import datetime
 
-# Create your views here.
-def index(request):
-    return render(request,'index.html')
-
+# Create your views here
 
 def get_weather_details(request):
         if request.method == "GET":
@@ -14,7 +11,7 @@ def get_weather_details(request):
             city_name = request.GET.get('city')
 
             if not city_name:
-                return render(request , 'index.html',{
+                return render(request , 'weather_report.html',{
                     "error":"City name does not exist"
                 })
 
@@ -42,19 +39,17 @@ def get_weather_details(request):
                     "temperature" : data["main"]["temp"],
                     "humidity" : data["main"]["humidity"],
                     "condition" :data["weather"][0]["description"],
-                    "wind_speed":data["wind"]["wind"],
+                    "wind_speed":data["wind"]["speed"],
                     "sunrise":datetime.fromtimestamp(data["sys"]["sunrise"]),
                     "sunset":datetime.fromtimestamp(data["sys"]["sunset"]),
-                    "visibility":data.get["visibility",0]/1000,
+                    "visibility":data.get("visibility",0)/1000,
                     "rain":rain,
 
                 }
 
-            return render(request, 'weather_report.html' , {
-                    'fetch_data' : fetch_data
-                })
+            return render(request, 'weather_report.html' ,fetch_data)
         
-        return render(request,'index.html')
+        # return render(request,'weather_report.html')
               
         
 

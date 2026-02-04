@@ -11,12 +11,15 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
-import os
 import dj_database_url
+import os
+from dotenv import load_dotenv
 
 load_dotenv()
-WEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
+
+WEATHER_API_KEY=os.getenv("OPENWEATHER_API_KEY")
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,9 +36,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 
-SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-dev-key")
+SECRET_KEY = '#d7ik6ao^0v9y$&83&1z(vy7==_e+5a%0#38b@yc7^^n6&a@z0'
 
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = True
 
 
 
@@ -61,7 +64,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'corsheaders.middleware.CorsMiddleware',
 
@@ -140,4 +142,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from django.conf import settings
+from datetime  import datetime
 
 # Create your views here.
 def index(request):
@@ -31,12 +32,22 @@ def get_weather_details(request):
         
             data = response.json()
 
+            rain =0
+            if rain in data:
+                rain = data["rain"].get("1h", data["rain"].get("3h",0))
+
+
             fetch_data ={
                     "city_name": data["name"],
                     "temperature" : data["main"]["temp"],
                     "humidity" : data["main"]["humidity"],
                     "condition" :data["weather"][0]["description"],
-                    "wind_speed":data["wind"]["speed"]
+                    "wind_speed":data["wind"]["wind"],
+                    "sunrise":datetime.fromtimestamp(data["sys"]["sunrise"]),
+                    "sunset":datetime.fromtimestamp(data["sys"]["sunset"]),
+                    "visibility":data.get["visibility",0]/1000,
+                    "rain":rain,
+
                 }
 
             return render(request, 'weather_report.html' , {
@@ -44,33 +55,8 @@ def get_weather_details(request):
                 })
         
         return render(request,'index.html')
-            
+              
         
-        
-
-        
-    
-         
-    
-
-    
-
-
-    
-        
-        
-    # error = "City name is required"
-
-    # if not city_name:
-    #     return response(request,'index.html',
-    #         {"error":error},
-    #         status=400
-    #     )
-    
-    
-
-    
-    # return response(request,'weather_report.html',{'fetch_data':fetch_data})
 
 
 

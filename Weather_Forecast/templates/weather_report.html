@@ -1,53 +1,69 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Weather Report</title>
-    <link rel="stylesheet" href="{% static 'weather_report.css' %}">
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="sample.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
-<div class="weather-card">
+  <!-- Search Bar -->
+  <header class="search-container glass">
+    <input type="text" placeholder="Search city..." />
+    <button aria-label="Search">
+      <i class="fa fa-search"></i>
+    </button>
+  </header>
 
-    <h1 class="city">
-        {% if fetch_data %}
-            {{ fetch_data.city_name }}
-        {% else %}
-            Weather Report
-        {% endif %}
-    </h1>
+  <!-- Main Weather -->
+  <section class="main-weather glass">
+    <h1>Hyderabad</h1>
+    <h2>28<span>°C</span></h2>
+    <p class="condition">Clear Sky</p>
+  </section>
 
-    {% if error %}
-        <p style="color:red; margin-top:10px;">{{ error }}</p>
-    {% endif %}
+  <!-- Weather Cards -->
+  <section class="weather-grid">
 
-    {% if fetch_data %}
-        <div class="weather-main">
-            <div class="temperature">
-                {{ fetch_data.temperature }}°C
-            </div>
-            <div class="condition">
-                {{ fetch_data.condition }}
-            </div>
-        </div>
+    <div class="weather-card glass">
+      <img src="assests/sunrise.png" alt="Sunrise" />
+      <h3>Sunrise</h3>
+      <p>06:12 AM</p>
+    </div>
 
-        <div class="weather-details">
-            <div class="detail">
-                <span>Humidity</span>
-                <strong>{{ fetch_data.humidity }}%</strong>
-            </div>
-            <div class="detail">
-                <span>Wind</span>
-                <strong>{{ fetch_data.wind_speed }} m/s</strong>
-            </div>
-        </div>
-    {% endif %}
+    <div class="weather-card glass">
+      <img src="assests/sunset.png" alt="Sunset" />
+      <h3>Sunset</h3>
+      <p>06:45 PM</p>
+    </div>
 
-    <br>
-    <a href="{% url 'index' %}">⬅ Go Back</a>
+    <div class="weather-card glass">
+      <img src="assests/humidity.png" alt="Humidity" />
+      <h3>Humidity</h3>
+      <p>65%</p>
+    </div>
 
-</div>
+    <div class="weather-card glass">
+      <img src="assests/rainy.png" alt="Rain" />
+      <h3>Rain</h3>
+      <p>0 mm</p>
+    </div>
+
+    <div class="weather-card glass">
+      <img src="assests/wind.png" alt="Wind" />
+      <h3>Wind</h3>
+      <p>12 km/h</p>
+    </div>
+
+    <div class="weather-card glass">
+      <img src="assests/witness.png" alt="Visibility" />
+      <h3>Visibility</h3>
+      <p>10 km</p>
+    </div>
+
+  </section>
 
 </body>
 </html>

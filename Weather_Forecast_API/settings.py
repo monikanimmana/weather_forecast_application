@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 WEATHER_API_KEY=os.getenv("OPENWEATHER_API_KEY")
+UNSPLASH_API_KEY=os.getenv("UNSPLASH_API_KEY")
 
 
 

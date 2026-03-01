@@ -100,3 +100,40 @@ python manage.py migrate
 
 # Start the server
 python manage.py runserver
+
+```
+## 🚀 Usage  
+
+- Open your browser and visit:  
+  **http://127.0.0.1:8000/**  
+- Enter any **city name**  
+- View **real-time weather information with dynamic background images**  
+
+---
+
+## 🌐 API Integration  
+
+### 🌤 OpenWeather API  
+
+Provides:  
+- Temperature  
+- Humidity  
+- Wind Speed  
+- Visibility  
+- Sunrise & Sunset  
+
+### 🖼 Unsplash API  
+
+Provides:  
+- High-quality dynamic city-based images  
+
+### 🔑 API Keys Setup  
+
+Create a `.env` file in the root directory:
+
+```env
+OPENWEATHER_API_KEY=your_openweather_api_key
+UNSPLASH_API_KEY=your_unsplash_api_key
+```
+
+

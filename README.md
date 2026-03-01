@@ -1,6 +1,6 @@
-# 🌦 Weather Forecast Web App  
+# 🌦 Weather Forecast Application  
 
-A dynamic and responsive **Weather Forecast Application** built using **Python & Django**, integrating external APIs for **real-time weather data**, **Cloudinary for optimized media handling**, and **Unsplash API for dynamic background images**. The frontend is crafted using **modern HTML & CSS** for a sleek and engaging user experience.
+A dynamic and responsive **Weather Forecast Application** built using **Python & Django**, integrating external APIs for **real-time weather data** and **Unsplash API for dynamic background images**. The frontend is crafted using **modern HTML & CSS** for a sleek and engaging user experience.
 
 ---
 
@@ -13,8 +13,7 @@ A dynamic and responsive **Weather Forecast Application** built using **Python &
 - [📸 Screenshots](#-screenshots)  
 - [⚙️ Installation](#️-installation)  
 - [🚀 Usage](#-usage)  
-- [🌐 API Integration](#-api-integration)  
-- [📦 Deployment](#-deployment)  
+- [🌐 API Integration](#-api-integration)   
 - [🔮 Future Enhancements](#-future-enhancements)  
 - [🤝 Contributing](#-contributing)  
 - [📜 License](#-license)  
@@ -31,12 +30,12 @@ The project demonstrates **full-stack development skills** including backend log
 
 ## ✨ Features  
 
-- 🌍 **Real-time weather data** (temperature, humidity, wind speed, visibility, sunrise & sunset)  
-- 🎨 **Dynamic background images** using Unsplash API  
-- 📱 **Fully responsive design** (desktop, tablet & mobile)  
-- ⚡ **Fast API-driven backend** using Django  
-- ☁️ **Cloudinary integration** for optimized media handling  
-- 🛡 **Error handling** for invalid city names and API failures  
+- 🌍 **Real-time weather data using OpenWeather API**  
+- 🌤 **OpenWeather API integration for accurate live weather updates**  
+- 🎨 **Dynamic background images using Unsplash API**  
+- 📱 **Fully responsive design (desktop, tablet & mobile)**  
+- ⚡ **Fast API-driven backend using Django**  
+- 🛡 **Error handling for invalid city names and API failures**   
 
 ---
 
@@ -46,11 +45,9 @@ The project demonstrates **full-stack development skills** including backend log
 |------------|----------------|
 | **Backend** | Python, Django |
 | **Frontend** | HTML5, CSS3 |
-| **API Integration** | Weather API, Unsplash API |
-| **Media Handling** | Cloudinary |
+| **API Integration** | openweatherapi , Unsplash API |
 | **Database** | SQLite (Development) |
-| **Version Control** | Git, GitHub |
-| **Deployment** | Heroku / AWS / Render |
+| **Version Control** | GitHub |
 
 ---
 
@@ -59,18 +56,14 @@ The project demonstrates **full-stack development skills** including backend log
 - **Django Backend** – Handles routing, API calls, business logic  
 - **Weather API Integration** – Fetches real-time weather data  
 - **Unsplash API** – Supplies high-quality dynamic background images  
-- **Cloudinary** – Optimizes and manages media content  
 - **Frontend (HTML + CSS)** – Displays weather data with responsive UI  
 
 ---
 
 ## 📸 Screenshots  
 
-> Add screenshots here  
-
-- Home Page  
-- Weather Results  
-- Mobile View  
+<img width="960" height="532" alt="image" src="https://github.com/user-attachments/assets/b25ac4bf-e249-4539-a74b-a41f601aaea1" />
+<img width="947" height="538" alt="image" src="https://github.com/user-attachments/assets/736a853c-6003-4b04-a3f0-4cda989c99e9" />
 
 ---
 
@@ -105,7 +98,7 @@ python manage.py runserver
 ## 🚀 Usage  
 
 - Open your browser and visit:  
-  **http://127.0.0.1:8000/**  
+  **http://127.0.0.1:8080/**  
 - Enter any **city name**  
 - View **real-time weather information with dynamic background images**  
 
@@ -135,13 +128,6 @@ Create a `.env` file in the root directory:
 OPENWEATHER_API_KEY=your_openweather_api_key
 UNSPLASH_API_KEY=your_unsplash_api_key
 ```
-## 📦 Deployment  
-
-- Deployed on **Heroku / AWS / Render**  
-- Environment variables secured using `.env`  
-- Static files handled using **Django collectstatic**  
-
----
 
 ## 🔮 Future Enhancements  
 

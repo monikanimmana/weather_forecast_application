@@ -37,7 +37,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 
-SECRET_KEY = '#d7ik6ao^0v9y$&83&1z(vy7==_e+5a%0#38b@yc7^^n6&a@z0'
+SECRET_KEY =os.getenv("DJANGO_API_KEY")
 
 DEBUG = True
 

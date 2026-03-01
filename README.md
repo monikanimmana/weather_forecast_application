@@ -64,6 +64,8 @@ The project demonstrates **full-stack development skills** including backend log
 
 <img width="960" height="532" alt="image" src="https://github.com/user-attachments/assets/b25ac4bf-e249-4539-a74b-a41f601aaea1" />
 <img width="947" height="538" alt="image" src="https://github.com/user-attachments/assets/736a853c-6003-4b04-a3f0-4cda989c99e9" />
+<img width="951" height="535" alt="image" src="https://github.com/user-attachments/assets/acb8933e-9f7e-43a8-9c58-7e5a160f6c9d" />
+
 
 ---
 

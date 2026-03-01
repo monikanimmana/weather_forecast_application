@@ -264,3 +264,119 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .main-weather h1 {
+    font-size: 30px;
+  }
+
+  .main-weather h2 {
+    font-size: 50px;
+  }
+
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  body {
+    justify-content: flex-start;
+  }
+
+  /* HERO SCREEN */
+  .hero-card {
+    padding: 32px 24px;
+    width: 90%;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .tagline {
+    font-size: 13px;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .hero-search input {
+    width: 100%;
+  }
+
+  .hero-search button {
+    width: 100%;
+    border-radius: 30px;
+    height: 44px;
+  }
+
+  /* TOP SEARCH BAR */
+  .search-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  /* MAIN WEATHER */
+  .main-weather {
+    padding: 24px 18px;
+    width: 90%;
+  }
+
+  .main-weather h1 {
+    font-size: 24px;
+  }
+
+  .main-weather h2 {
+    font-size: 42px;
+  }
+
+  .main-weather h2 span {
+    font-size: 24px;
+  }
+
+  /* WEATHER GRID */
+  .weather-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 16px;
+    margin-top: 35px;
+  }
+
+  .weather-card {
+    padding: 22px 18px;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 480px) {
+
+  .main-weather h2 {
+    font-size: 36px;
+  }
+
+  .weather-card img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .weather-card h3 {
+    font-size: 15px;
+  }
+
+  .weather-card p {
+    font-size: 14px;
+  }
+}

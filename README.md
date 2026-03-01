@@ -135,5 +135,44 @@ Create a `.env` file in the root directory:
 OPENWEATHER_API_KEY=your_openweather_api_key
 UNSPLASH_API_KEY=your_unsplash_api_key
 ```
+## 📦 Deployment  
 
+- Deployed on **Heroku / AWS / Render**  
+- Environment variables secured using `.env`  
+- Static files handled using **Django collectstatic**  
+
+---
+
+## 🔮 Future Enhancements  
+
+- 📆 **7-day & hourly weather forecast**  
+- 👤 **User authentication system**  
+- 🌙 **Dark / Light mode toggle**  
+- 🌎 **Multi-language support**  
+- 📊 **Weather analytics dashboard**  
+
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome! 🎉  
+
+### Steps to Contribute  
+
+```bash
+# Fork the repository
+
+# Create a new branch
+git checkout -b feature/your-feature
+
+# Commit your changes
+git commit -m "Added new feature"
+
+# Push your branch
+git push origin feature/your-feature
+
+```
+## 📜 License  
+
+This project is licensed under the **MIT License** — feel free to use, modify, and distribute.
 
